@@ -2,7 +2,9 @@
 
 针对觅长生游戏的 PuerTS 嵌入实现
 
-> 该项目是直接从 space 仓库迁移过来的，项目宗旨是直接提供仅最基础的 PuerTS 嵌入及相关处理方式，而无需依赖其他框架支持。
+> 该项目是直接从 space 仓库迁移过来的，项目宗旨是仅提供最基础的 PuerTS 嵌入，以及相应的 JavaScript/TypeScript 处理手段，而无需依赖其他框架支持。
+
+> 目前尚未完成
 
 ## Getting Started
 

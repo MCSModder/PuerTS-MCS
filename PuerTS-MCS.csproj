@@ -7,10 +7,12 @@
         <ProjectGuid>{4B4DF6DC-8EF2-4865-8C75-F28F6D33ACBC}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>PuerTS_MCS</RootNamespace>
+        <RootNamespace>PuerTsPlugin.PuerTS_MCS</RootNamespace>
         <AssemblyName>PuerTS_MCS</AssemblyName>
         <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <DocumentationFile>PuerTS_MCS.xml</DocumentationFile>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,18 +34,70 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
+        <Reference Include="BepInEx">
+          <HintPath>..\..\WorkSpace\Library\BepInEx.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
         <Reference Include="System" />
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
+        <Reference Include="UnityEngine">
+          <HintPath>..\..\WorkSpace\Library\UnityEngine.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+          <HintPath>..\..\WorkSpace\Library\UnityEngine.CoreModule.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Loader\McsLoader.cs" />
+        <Compile Include="Main.cs" />
+        <Compile Include="Manager\JsEnvManager.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Puerts\JsEnv.cs" />
+        <Compile Include="Puerts\JSType\ArrayBuffer.cs" />
+        <Compile Include="Puerts\JSType\GenericDelegate.cs" />
+        <Compile Include="Puerts\JSType\JSObject.cs" />
+        <Compile Include="Puerts\JSType\TypedValue.cs" />
+        <Compile Include="Puerts\Loader.cs" />
+        <Compile Include="Puerts\Native\Backend.cs" />
+        <Compile Include="Puerts\Native\PuertsDLL.cs" />
+        <Compile Include="Puerts\Native\StaticCallbacks.cs" />
+        <Compile Include="Puerts\Translator\ArgumentHelper.cs" />
+        <Compile Include="Puerts\Translator\DataTranslate.cs" />
+        <Compile Include="Puerts\Translator\NativeValueApiGeneric.cs" />
+        <Compile Include="Puerts\Translator\ObjectPool.cs" />
+        <Compile Include="Puerts\Translator\StaticTranslate.cs" />
+        <Compile Include="Puerts\TypeExtensions.cs" />
+        <Compile Include="Puerts\TypeRegister.cs" />
+        <Compile Include="Puerts\Utils.cs" />
+        <Compile Include="Puerts\Wrapper\GenericMethodWrap.cs" />
+        <Compile Include="Puerts\Wrapper\LazyWrap.cs" />
+        <Compile Include="Puerts\Wrapper\ReflectionWrap.cs" />
+        <Compile Include="Puerts\Wrapper\StaticWrapRegister.cs" />
+        <Compile Include="Util\DllTool.cs" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="CHANGELOG.md" />
       <Content Include="CODEOWNERS" />
       <Content Include="CONTRIBUTING.md" />
+      <Content Include="JavaScript\csharp.mjs" />
+      <Content Include="JavaScript\dispose.mjs" />
+      <Content Include="JavaScript\events.mjs" />
+      <Content Include="JavaScript\init.mjs" />
+      <Content Include="JavaScript\init_il2cpp.mjs" />
+      <Content Include="JavaScript\log.mjs" />
+      <Content Include="JavaScript\nodepatch.mjs" />
+      <Content Include="JavaScript\polyfill.mjs" />
+      <Content Include="JavaScript\promises.mjs" />
+      <Content Include="JavaScript\timer.mjs" />
+      <Content Include="Library\libgcc_s_seh-1.dll" />
+      <Content Include="Library\libnode.dll" />
+      <Content Include="Library\libwinpthread-1.dll" />
+      <Content Include="Library\msys-quickjs.dll" />
+      <Content Include="Library\puerts.dll" />
       <Content Include="LICENSE" />
       <Content Include="README.md" />
     </ItemGroup>

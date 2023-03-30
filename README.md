@@ -1,15 +1,16 @@
-# puerts/PuerTS-MCS
+# PuerTS/PuerTS-MCS
 
-针对觅长生游戏的PuerTS嵌入实现
+针对觅长生游戏的 PuerTS 嵌入实现
+
+> 该项目是直接从 space 仓库迁移过来的，项目宗旨是直接提供仅最基础的 PuerTS 嵌入及相关处理方式，而无需依赖其他框架支持。
 
 ## Getting Started
 
 Download links:
 
-SSH clone URL: ssh://git@git.jetbrains.space/breakthecontinent/puerts/PuerTS-MCS.git
+SSH clone URL: ssh://git@git.jetbrains.space/breakthecontinent/PuerTS/PuerTS-MCS.git
 
-HTTPS clone URL: https://git.jetbrains.space/breakthecontinent/puerts/PuerTS-MCS.git
-
+HTTPS clone URL: https://git.jetbrains.space/breakthecontinent/PuerTS/PuerTS-MCS.git
 
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
